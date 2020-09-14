@@ -168,31 +168,6 @@
         voluptates impedit.
       </li>
     </ul>
-
-    <script>
-      const video = document.querySelector("video");
-      const button = document.getElementById("playButton");
-
-      function mediaPlayer(config) {
-        this.media = config.el;
-      }
-
-      mediaPlayer.prototype.play = function() { // cuando se trabaja con clases debemos agregar los metodos al prototype
-        this.media.play();
-      }
-
-      const player = new mediaPlayer({ el: video });
-
-      mediaPlayer.prototype.play = function() {
-        if(this.media.paused) {
-          this.media.play();
-        } else {
-          this.media.pause()
-        }
-      }
-
-      button.onclick = () => player.play();
-      
-    </script>
+    <script type="module" src="assets/index.js"></script>
   </body>
 </html>
